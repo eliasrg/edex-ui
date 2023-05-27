@@ -205,6 +205,7 @@
             "name": "O",
             "cmd": "o",
             "shift_cmd": "O",
+            "ctrl_cmd": "~~~CTRLSEQ23~~~",
             "alt_cmd": "~~~CTRLSEQ1~~~o"
         },
         {
@@ -297,6 +298,7 @@
             "name": "L",
             "cmd": "l",
             "shift_cmd": "L",
+            "ctrl_cmd": "~~~CTRLSEQ22~~~",
             "alt_cmd": "~~~CTRLSEQ1~~~l"
         },
         {

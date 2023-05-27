@@ -3,7 +3,7 @@ class Keyboard {
         if (!opts.layout || !opts.container) throw "Missing options";
 
         const layout = JSON.parse(require("fs").readFileSync(opts.layout, {encoding: "utf-8"}));
-        this.ctrlseq = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+        this.ctrlseq = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
         this.container = document.getElementById(opts.container);
 
         this.linkedToTerm = true;
@@ -44,7 +44,7 @@ class Keyboard {
             });
 
             let cat = mods.join("");
-            
+
             if (cut.type === "app" && cut.action === "TAB_X" && cut.trigger === "X") {
                 for (let i = 1; i <= 5; i++) {
                     let ncut = Object.assign({}, cut);
@@ -371,7 +371,7 @@ class Keyboard {
         if (shortcutsCat.length > 1) {
             this._shortcuts[shortcutsCat].forEach(cut => {
                 if (!cut.enabled) return;
-        
+
                 let trig = cut.trigger.toLowerCase()
                                     .replace("plus", "+")
                                     .replace("space", " ")
